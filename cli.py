@@ -4,21 +4,31 @@ import click
 
 TICK_CHARACTER = u'\u2713'
 ERROR_CHARACTER = u'\u2718'
+APPS = ['fzf', 'git', 'code', 'docker', 'docker-compose']
 
 
 @click.command()
 def onboarding():
     """Simple aplication controlling you have al the tools needed for TNP"""
-    apps = ['fzf', 'git', 'code', 'docker', 'docker-compose', 'pepe']
     shell = subprocess.check_output('echo $SHELL', shell=True)
+    shell = shell.decode('utf-8').strip()
 
+    click.echo('-------------------------------------')
     click.echo('You are using {} shell'.format(shell))
 
-    for app in apps:
+    for app in APPS:
         try:
-            subprocess.check_output(
-                'which {}'.format(app), shell=True)
-            click.secho('{} {}'.format(TICK_CHARACTER, app), fg='green')
+            output = subprocess.check_output(
+                '{} --version'.format(app), shell=True)
+            output = output.decode('utf-8').strip()
+
+            try:
+                version = output.split('version')[1]
+            except IndexError:
+                version = output
+
+            click.secho('{} {}: {}'.format(
+                TICK_CHARACTER, app, version), fg='green')
         except subprocess.CalledProcessError as e:
             pass
             click.secho('{} {}'.format(ERROR_CHARACTER, app), fg='red')
