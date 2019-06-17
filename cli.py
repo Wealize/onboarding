@@ -4,7 +4,10 @@ import click
 
 TICK_CHARACTER = u'\u2713'
 ERROR_CHARACTER = u'\u2718'
+TITLE = ''
+DESCRIPTION = ''
 APPS = ['fzf', 'git', 'code', 'docker', 'docker-compose']
+SERVICES = ['abstract', 'slack', 'github', 'gitlab', 'codacy', 'factorial']
 
 
 @click.command()
@@ -30,7 +33,6 @@ def onboarding():
             click.secho('{} {}: {}'.format(
                 TICK_CHARACTER, app, version), fg='green')
         except subprocess.CalledProcessError as e:
-            pass
             click.secho('{} {}'.format(ERROR_CHARACTER, app), fg='red')
 
 
