@@ -6,7 +6,7 @@ description: |
 
   We're very happy you wanted to join us, this app will help you with the onboarding
   so you can be coding as soon as possible! 🚀
-description_apps: First, please check you have all this applications installed, you\'ll need them soon enough. 😁
+description_apps: First, please check you have all this applications installed, you'll need them soon enough. 😁
 description_services: Please check you have access to all these services
 description_footer: Thank you for using our onboarding app 🏆
 
@@ -14,16 +14,16 @@ apps:
   fzf: Please check https://github.com/junegunn/fzf#installation for installation
   git: Configure and install git 📜 on Mac https://www.atlassian.com/git/tutorials/install-git
   code: You can install VS Code 👩🏽‍💻 from https://code.visualstudio.com/, but to use it via command line you also need to install https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
-  docker: Install Docker for Mac, you\'ll need it 🐳
+  docker: Install Docker for Mac, you'll need it 🐳. https://docs.docker.com/docker-for-mac/
   docker-compose: Install docker-compose to run your docker services all in one https://docs.docker.com/compose/install/
 
 services:
   gmail: Can you access your TNP mail account? https://gmail.com
-  abstract: Abstract is Git for designers, so you\'ll need it to review the wireframes
+  abstract: Abstract is Git for designers, so you'll need it to review the wireframes https://www.abstract.com/.
   jira: Here is where we plan, estimate and sprint all the projects https://theneonproject.atlassian.net
   slack: Do you have access to Slack? https://theneonproject.slack.com, you know you can send gifs using `/giphy parrot` command right? 😎
-  github: Here there\'ll be 🐉 https://github.com/TheNeonProject
+  github: Here there'll be 🐉 https://github.com/TheNeonProject
   gitlab: We use Gitlab CI only, so we can debug our CI/CD platform and check why the build broke https://gitlab.com/TheNeonProject
-  codacy: Our Quality Code service, you need to Signup with your GitHub account, even if you don\'t use you The Neon Project there https://www.codacy.com/
+  codacy: Our Quality Code service, you need to Signup with your GitHub account, even if you don't use you The Neon Project there https://www.codacy.com/
   factorial: Our HR service, you need to checkin and out here, you can select your holidays and download legal document such as Salary documents https://factorialhr.es/
-  heroku: We usually deploy to Heroku, a PaaS, when you need access to the project deployment, we\'ll give you access accordingly https://dashboard.heroku.com/apps.
+  heroku: We usually deploy to Heroku, a PaaS, when you need access to the project deployment, we'll give you access accordingly https://dashboard.heroku.com/apps.
