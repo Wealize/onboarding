@@ -1,3 +1,9 @@
+# Team Onboarding app 🤓
+
+![Screenshot 2019-06-18 at 19 34 10](https://user-images.githubusercontent.com/488556/59706185-3a765680-9200-11e9-90ce-490c377e7016.png)
+
+![Screenshot 2019-06-18 at 19 34 24](https://user-images.githubusercontent.com/488556/59706184-3a765680-9200-11e9-9a29-a10e7fe8fff1.png)
+
 # Installation
 
 You need to install pipenv
