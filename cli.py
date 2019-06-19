@@ -6,8 +6,8 @@ import subprocess
 import yaml
 import click
 
-from services import render_apps, render_services
-from formatters import OnboardingFormatter
+from services.formatters import OnboardingFormatter
+from services.renderer import OnboardingRenderer
 
 
 @click.command()
@@ -16,12 +16,13 @@ def onboarding():
     config = yaml.load(open(config_path, 'r'), Loader=yaml.FullLoader)
 
     formatter = OnboardingFormatter(config)
+    renderer = OnboardingRenderer(config)
 
     shell = subprocess.check_output('echo $SHELL', shell=True)
     shell = shell.decode('utf-8').strip()
 
-    apps = '\n'.join(render_apps(config))
-    services = '\n'.join(render_services(config))
+    apps = '\n'.join(renderer.render_apps())
+    services = '\n'.join(renderer.render_services())
 
     click.echo(formatter.get_onboarding_text(shell, apps))
     want_continue = click.confirm(
