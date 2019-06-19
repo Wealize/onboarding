@@ -10,6 +10,8 @@ autopep8 = "*"
 click = "*"
 colorama = "*"
 pyyaml = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.7"
