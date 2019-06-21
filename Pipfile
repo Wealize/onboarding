@@ -12,6 +12,7 @@ colorama = "*"
 pyyaml = "*"
 pytest = "*"
 pytest-cov = "*"
+codacy-coverage = "*"
 
 [requires]
 python_version = "3.7"
