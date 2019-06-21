@@ -1,6 +1,7 @@
 import os
 import unittest
 from unittest import mock
+import subprocess
 
 from services.renderer import OnboardingRenderer
 from services.checker import OnboardingAppChecker
@@ -14,7 +15,10 @@ class OnboardingRendererTestCase(unittest.TestCase):
 
         self.assertEqual(apps, [])
 
-    def test_render_apps_returns_failed_apps(self):
+    @mock.patch.object(OnboardingAppChecker, 'get_app_version')
+    def test_render_apps_returns_failed_apps(self, get_app_version):
+        get_app_version.side_effect = subprocess.CalledProcessError(
+            returncode=1, cmd='ls')
         config = {
             'apps': {'ls': ''}
         }
