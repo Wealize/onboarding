@@ -31,3 +31,11 @@ pipenv run python cli.py
 ## Running from VS Code
 
 You can open the VS Code, go to the Debug Tab and click the play button to run the script ✨.
+
+## Run the tests
+
+You can run the tests using pytest.
+
+```bash
+pipenv run pytest services/tests/ --cov=. --disable-warnings
+```
