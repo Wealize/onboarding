@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  backend:
+    docker:
+      - image: circleci/python:3.7.4
+
+    working_directory: ~/code
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Pipfile.lock" }}
+            - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            sudo pip3 install pipenv
+            pipenv install --dev
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "Pipfile.lock" }}
+
+      - run:
+          name: run tests
+          command: |
+            pipenv run python3 -m pytest services/tests/ --cov=. --cov-report xml:coverage.xml --disable-warnings
+            pipenv run python-codacy-coverage -r coverage.xml
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - backend
