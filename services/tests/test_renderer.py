@@ -1,7 +1,6 @@
-import os
+import subprocess
 import unittest
 from unittest import mock
-import subprocess
 
 from services.renderer import OnboardingRenderer
 from services.checker import OnboardingAppChecker

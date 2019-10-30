@@ -21,7 +21,7 @@ class OnboardingRenderer:
 
                 apps.append(click.style(
                     f'{TICK_CHARACTER} {app} {version}', fg='green'))
-            except subprocess.CalledProcessError as e:
+            except subprocess.CalledProcessError:
                 apps.append(click.style(
                     f'{ERROR_CHARACTER} {app} \n{instructions}', fg='red'))
 

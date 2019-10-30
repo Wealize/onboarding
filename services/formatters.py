@@ -1,4 +1,4 @@
-from services.constants import TICK_CHARACTER, ERROR_CHARACTER, SEPARATOR
+from services.constants import TICK_CHARACTER, SEPARATOR
 
 
 class OnboardingFormatter:
