@@ -12,9 +12,17 @@
 
 ## Installation
 
-You need to install pipenv
+You need to install pip3 (included in python3) and pipenv.
+
+(Optional) If you are working in a clean macOS device, you should install Homebrew first
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Then, install python3 and pipenv
 
 ```bash
+brew install python3
 pip3 install pipenv
 pipenv --python 3.7
 pipenv install
