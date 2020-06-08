@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import subprocess
 
@@ -11,7 +12,7 @@ from services.renderer import OnboardingRenderer
 @click.command()
 def onboarding():
     config_path = os.environ.get('ONBOARDING_FILE_PATH', 'config.yml')
-    config = yaml.safe_load(open(config_path, 'r'), Loader=yaml.FullLoader)
+    config = yaml.safe_load(open(config_path, 'r'))
 
     formatter = OnboardingFormatter(config)
     renderer = OnboardingRenderer(config)
