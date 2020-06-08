@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  onboarding:
+    build: .
+    image: tnpr/onboarding
+    volumes:
+      - .:/code
