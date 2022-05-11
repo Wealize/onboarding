@@ -1,7 +1,7 @@
-title: The Neon Project Onboarding app
+title: Wealize Onboarding app
 
 description: |
-  Welcome to your new job position at 🎈The Neon Project🎈
+  Welcome to your new job position at 🎈Wealize🎈
   --------------------------------------------------------
 
   We're very happy you wanted to join us, this app will help you with the onboarding
@@ -18,14 +18,14 @@ apps:
   docker-compose: Install docker-compose to run your docker services all in one https://docs.docker.com/compose/install/
 
 services:
-  gmail: Can you access your TNP mail account? https://gmail.com
+  gmail: Can you access your WLZ mail account? https://gmail.com
   abstract: Abstract is Git for designers, so you'll need it to review the wireframes https://www.abstract.com/.
-  jira: Here is where we plan, estimate and sprint all the projects https://theneonproject.atlassian.net
-  slack: Do you have access to Slack? https://theneonproject.slack.com, you know you can send gifs using `/giphy parrot` command right? 😎
-  github: Here there'll be 🐉 https://github.com/TheNeonProject
-  codacy: Our Quality Code service, you need to Signup with your GitHub account, even if you don't use you The Neon Project there https://www.codacy.com/
+  zeplin: For UX/UI and designs.
+  notion: Our "wiki".
+  jira: Here is where we plan, estimate and sprint all the projects https://wealize.atlassian.net
+  slack: Do you have access to Slack? https://wealize.slack.com, you know you can send gifs using `/giphy parrot` command right? 😎
+  github: Here there'll be 🐉 https://github.com/Wealize
   factorial: Our HR service, you need to checkin and out here, you can select your holidays and download legal document such as Salary documents https://factorialhr.es/
   heroku: We usually deploy to Heroku, a PaaS, when you need access to the project deployment, we'll give you access accordingly https://dashboard.heroku.com/apps.
   1password: We are concern about security, that' why we use 1Password to store all the passwords and secure notes and related data needed to do our work. https://1password.com/
-  zoom: We use Zoom.us to do the dailies and retrospectives
   netelip: (Only if you talk to clients) Voip service in case you need to talk to clients, you can call with this service. https://www.netelip.com/
